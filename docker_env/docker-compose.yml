@@ -8,11 +8,11 @@ services:
       - "6006:6006"
     stdin_open: true
     tty: true
-    volumes:
-      - $(pwd):/workspace
-    # deploy:
-    #   reservations:
-    #     devices:
-    #       # - driver: nvidia
-    #       # device_ides: ['0', '1']
-    #       capabilities: [gpu]
+    volumes: 
+      - ../experiment:/workspace
+    deploy:
+      reservations:
+        devices:
+          # - driver: nvidia
+          # device_ides: ['0', '1']
+          capabilities: [gpu]
