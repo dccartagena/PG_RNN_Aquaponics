@@ -10,9 +10,6 @@ services:
     tty: true
     volumes: 
       - ../experiment:/workspace
-    deploy:
-      reservations:
-        devices:
-          - driver: nvidia
-            count: all
-            capabilities: [gpu]
+    runtime: 'nvidia'
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
