@@ -13,6 +13,6 @@ services:
     deploy:
       reservations:
         devices:
-          # - driver: nvidia
-          # device_ides: ['0', '1']
-          capabilities: [gpu]
+          - driver: nvidia
+            count: all
+            capabilities: [gpu]
