@@ -7,3 +7,4 @@ numpy                         1.21.1
 matplotlib                    3.4.2
 psycopg2                      2.8.5
 jupyter                       1.0.0
+horovod[pytorch] 
